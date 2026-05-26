@@ -1,0 +1,31 @@
+### Register User 1
+POST http://localhost:5000/api/auth/register
+Content-Type: application/json
+
+{
+  "name": "Atish",
+  "email": "atish@test.com",
+  "password": "password123"
+}
+
+### Login
+POST http://localhost:5000/api/auth/login
+Content-Type: application/json
+
+{
+  "email": "atish@test.com",
+  "password": "password123"
+}
+
+### Get Boards (paste your token below after login)
+GET http://localhost:5000/api/boards
+Authorization: Bearer "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjZhMTU5NTJlY2MzNDk3YzkxMzc3Y2E3MiIsIm5hbWUiOiJBdGlzaCIsImlhdCI6MTc3OTc5OTQ0MiwiZXhwIjoxNzgwNDA0MjQyfQ.aI7asigqocKpPjH6r0hwTvV4_OoWxZuG04FaAXI6X8g"
+
+### Create Board
+POST http://localhost:5000/api/boards
+Content-Type: application/json
+Authorization: Bearer "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjZhMTU5NTJlY2MzNDk3YzkxMzc3Y2E3MiIsIm5hbWUiOiJBdGlzaCIsImlhdCI6MTc3OTc5OTQ0MiwiZXhwIjoxNzgwNDA0MjQyfQ.aI7asigqocKpPjH6r0hwTvV4_OoWxZuG04FaAXI6X8g"
+
+{
+  "title": "My First Board"
+}
